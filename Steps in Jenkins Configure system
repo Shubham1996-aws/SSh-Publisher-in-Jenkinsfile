@@ -1,0 +1,21 @@
+SSH Publisher:- 
+
+Steps to follow to use SSH Publisher in Jenkins Pipeline.
+
+Change the ownership of remote directory
+
+sudo chown -R owner:group dirname
+
+set the password for the remote user.
+
+allow the user sudo access i.e. add the user in visudo file
+
+In Jenkins under "configure system" under "Publish over SSH" click on "ADD" and then "Name=any name of server", "Hostname= IP of Remote Server"
+
+"Username= Remote server user name" "Remote Directory= Mention the directroy where you want to copy files from jenkins to remote server if not mentioned 
+
+it will take the user's home directory".
+
+Click on "Advanced" Checkbox "Use password authentication, or use a different key" and under "Passphrase / Password" mention the password of the remote server's user.
+
+Lastly Click on Test Configuration it will promt SUCCESS.  
